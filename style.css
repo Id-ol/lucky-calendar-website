@@ -151,17 +151,22 @@ ul { list-style: none; }
     background: var(--white); border-radius: var(--radius); padding: 32px 28px;
     box-shadow: var(--shadow); transition: transform var(--transition), box-shadow var(--transition);
     border: 1px solid rgba(0,0,0,.04);
+    /* Значок и заголовок — в одной строке (заголовок по центру значка), описание под ними на
+       всю ширину. align-content: start — чтобы в карточке, растянутой по соседу в ряду,
+       лишняя высота уходила вниз, а не раздвигала строку со значком. */
+    display: grid; grid-template-columns: auto 1fr; column-gap: 16px;
+    align-items: center; align-content: start;
 }
 .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .feature-icon {
-    width: 48px; height: 48px; border-radius: 12px; margin-bottom: 18px;
+    width: 48px; height: 48px; border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
     background: linear-gradient(135deg, var(--green), var(--green-light));
     color: var(--white); font-size: 1.3rem;
 }
 .feature-icon svg { width: 24px; height: 24px; stroke: var(--white); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-.feature-card p { font-size: .92rem; color: var(--text-secondary); line-height: 1.6; }
+.feature-card h3 { font-size: 1.1rem; font-weight: 700; }
+.feature-card p { grid-column: 1 / -1; margin-top: 18px; font-size: .92rem; color: var(--text-secondary); line-height: 1.6; }
 
 /* ---- How it works ---- */
 .steps { display: flex; gap: 32px; max-width: 900px; margin: 0 auto; }
