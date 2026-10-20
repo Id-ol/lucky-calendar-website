@@ -120,7 +120,8 @@ ul { list-style: none; }
     box-shadow: 0 4px 20px rgba(127, 180, 7, .35);
 }
 .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(127, 180, 7, .45); }
-.hero-cta svg { width: 22px; height: 22px; }
+/* Значок Google Play чёрный: белым (цветом текста) на зелёной кнопке его почти не было видно. */
+.hero-cta svg { width: 22px; height: 22px; color: #000; }
 
 /* ---- Section common ---- */
 .section { padding: 100px 24px; }
