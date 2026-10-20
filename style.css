@@ -120,8 +120,8 @@ ul { list-style: none; }
     box-shadow: 0 4px 20px rgba(127, 180, 7, .35);
 }
 .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(127, 180, 7, .45); }
-/* Значок Google Play на 50% крупнее прежних 22px: при 22px его тонкие линии на зелёной кнопке
-   почти не читались — ни белым, ни чёрным. Цвет — белый, как у текста кнопки. */
+/* Значок Google Play 33px (было 22px — мелко на крупной кнопке). Цвет — белый, как у текста
+   кнопки. Сам значок — в index.html, взят из Simple Icons. */
 .hero-cta svg { width: 33px; height: 33px; }
 
 /* ---- Section common ---- */
